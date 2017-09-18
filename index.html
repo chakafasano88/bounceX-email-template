@@ -27,22 +27,35 @@
           width: 100% !important;
         }
 
+        .block-breaks {
+          display: block !important;
+        }
+
         .box-shadow {
-          -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
-          -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
-          box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+          border-bottom: 3px solid gray;
+
+        }
+        /* APPLIES BOX SHADOW IN APPLE MAIL */
+        @supports (animation-name: test) {
+          .box-shadow {
+            -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+          }
+
         }
 
         /*======  HEADER (BLOCK #1) ========*/
         .responsive-header{
           display: block;
           text-align: center;
-          font-size: 24px !important;
+          font-size: 32px !important;
           width: 90% !important;
+          font-family: arial !important;
         }
 
         .logo-spacer-cell {
-          width: 57.5%;
+          width: 44%;
         }
 
         /* TAGLINE/SLOGAN TABLE (BLOCK #2)" */
@@ -54,7 +67,7 @@
         }
         /* "TOO GOOD TO PASS UP" TEXT */
         .tagline {
-          font-size: 35px !important;
+          font-size: 38px !important;
           width: 100% !important;
         }
         /* HEADING CELL */
@@ -76,7 +89,7 @@
         }
         /* THE ACTUAL <p> */
         .tagline-paragraph {
-          font-size: 16px !important;
+          font-size: 25px !important;
           width: 65% !important;
         }
         /* BUTTON TABLE */
@@ -87,8 +100,8 @@
         /* THE <button> */
         .tagline-button {
           width: 50% !important;
-          height: 40px !important;
-          font-size: 16px !important;
+          height: 60px !important;
+          font-size: 20px !important;
           font-family: century !important;
           font-style: italic !important;
           background-color: #387c9b !important;
@@ -139,7 +152,7 @@
 
         /* LOGO IMAGE */
         .responsive-logo {
-          width: 100% !important;
+          width: 130% !important;
           height: auto !important;
         }
 
@@ -157,25 +170,25 @@
         }
         /* SHOWS MOBILE BOTTOM NAV */
         .bottom-nav-table-mobile {
-          width: 100% !important;
+          width: 90% !important;
           display: block !important;
         }
         /* MOBILE BOTTOM NAV CELLS */
         .bot-nav-cell {
           display: block !important;
           text-align: center;
-          font-size: 14px !important
+          font-size: 18px !important
         }
 
         /* ICON IMAGES */
         .responsive-image-icons {
           width: inherit !important;
           height: auto !important;
-
         }
+
         /* FOOTER INFORMATION (BLOCK #6) */
         .footer-info-table {
-          width: 100%  !important;
+          width: 90%  !important;
         }
     }
   </style>
@@ -183,33 +196,40 @@
 
   <body>
     <!-- MAIN CONTAINER -->
-    <table  class="table-container meta-container" align="center" width="100%" cellspacing="0" cellpadding="20" border="10">
+    <table  class="table-container meta-container" align="center" width="100%" cellspacing="0" cellpadding="20" border="0">
       <tr>
         <td align="center">
           <!--  EMAIL CONTAINER -->
           <table width="600" cellspacing="0" cellpadding="20" border="0" class="table-container">
             <tr>
               <td align="center">
-                <!-- HEADER CONTAINER (BLOCK #1) -->
-                <table class="header-table table-container" width="600" cellspacing="0" cellpadding="0" border="0">
+                <table width="570" class="box-shadow">
                   <tr>
-                    <td class="responsive-header" align="left">
-                      <a style="text-decoration: none; color: #817B73; font-size: .5em;" href="https://www.uncommongoods.com/">Take a look inside</a>
+                    <td>
+                      <!-- HEADER CONTAINER (BLOCK #1) -->
+                      <table class="header-table table-container" width="600" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td class="responsive-header" align="left">
+                            <a style="text-decoration: none; color: #817B73; font-size: .5em;" href="https://www.uncommongoods.com/">Take a look inside</a>
+                          </td>
+                          <td class="responsive-header" align="right">
+                            <a  style="text-decoration: none; color: #387c9b; font-size: .5em;" href="https://www.uncommongoods.com/">View in Browser</a>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- UNCOMMONGOODS LOGO -->
+                      <table width="600" align="center" border="0" class="responsive-header table-container">
+                        <tr>
+                          <!-- EMPTY CELL FOR MARGIN -->
+                          <td class="logo-spacer-cell" >
+                          </td>
+                          <td class="responsive-header" align="center">
+                            <img class="responsive-logo" src="http://i67.tinypic.com/200bwbs.png" alt="">
+                          </td>
+                        </tr>
+                      </table>
                     </td>
-                    <td class="responsive-header" align="right">
-                      <a  style="text-decoration: none; color: #387c9b; font-size: .5em;" href="https://www.uncommongoods.com/">View in Browser</a>
-                    </td>
-                  </tr>
-                </table>
-                <!-- UNCOMMONGOODS LOGO -->
-                <table width="600" align="center" border="0" class="responsive-header table-container box-shadow">
                   <tr>
-                    <td class="logo-spacer-cell" >
-                    </td>
-                    <td class="responsive-header" align="center">
-                      <img class="responsive-logo" src="http://i67.tinypic.com/200bwbs.png" alt="">
-                    </td>
-                  </tr>
                 </table>
                   <!--MAIN NAV CONTAINER (BLOCK #2)  -->
                 <table class="responsive-main-nav-hide table-container box-shadow" style="border-top: 1px solid #817B73; border-bottom: 1px solid #817B73; padding: 5px 0px 5px 0px; list-style: none;" align="center" border="0" width="600" >
@@ -274,7 +294,7 @@
                     </td>
                   </tr>
                 </table>
-                <br>
+                <br class="block-breaks" style="display: none;">
                 <!-- THREE INLINE IMAGES (BLOCK #4)  -->
                 <table class="images-table table-container box-shadow" style="border-top: 1px solid #817B73; border-bottom: 1px solid #817B73; padding: 10px 0 10px 0;" width="600" class="images-table table-container box-shadow">
                   <tr>
@@ -306,7 +326,7 @@
                     </td>
                   </tr>
                 </table>
-                <br class="block-breaks">
+                <br class="block-breaks" style="display: none;">
                 <!-- MOBILE MAIN NAV BAR displayed in MOBILE view ****ATTENTION: this is hidden in DESKTOP (BLOCK #5)  -->
                 <table class="responsive-main-nav-mobile table-container box-shadow" style="display: none;" align="center" width="600" class="responsive-main-nav-mobile table-container box-shadow">
                   <tr>
@@ -316,25 +336,25 @@
                           <td align="center">
                           <!-- MAIN NAV BAR TABLE CELL-->
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73" href="https://www.uncommongoods.com/">home</a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73" href="https://www.uncommongoods.com/">home</a></li>
                             </td>
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/kitchen-bar?view=all">kitchen & bar</a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/kitchen-bar?view=all">kitchen & bar</a></li>
                             </td>
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/jewelry?view=all">jewlery </a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/jewelry?view=all">jewlery </a></li>
                             </td>
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/for-her?view=all">women </a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/for-her?view=all">women </a></li>
                             </td>
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/for-him?view=all">men </a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/for-him?view=all">men </a></li>
                             </td>
                             <td class="responsive-main-nav-cells" style="border-bottom: 1px solid #817B73;">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/this-just-in">this just in </a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/this-just-in">this just in </a></li>
                             </td>
                             <td class="responsive-main-nav-cells">
-                              <li><a style="text-decoration: none; font-size: 25px; color: #817B73"  href="https://www.uncommongoods.com/sale">sale</a></li>
+                              <li><a style="text-decoration: none; font-size: 30px; color: #817B73"  href="https://www.uncommongoods.com/sale">sale</a></li>
                             </td>
                           </td>
                         </tr>
@@ -342,7 +362,7 @@
                     </td>
                   </tr>
                 </table>
-                <br class="block-breaks">
+                <br class="block-breaks" style="display: none;">
                   <!--=============== DESKTOP Social Media Icons and Bottom Nav Bar Container for DESKTOP. *****ATTENTOIN: THIS IS HIDDEN IN MOBILE (BLOCK #6)  ====================-->
                 <table class="bottom-nav-table-hide table-container" style="border-bottom: 1px solid #817B73; font-family: Helvetica; " cellpadding="3" cellspacing="0" width="600" height="60">
                   <tr>
@@ -400,7 +420,7 @@
                 </table>
                 <!--=============== MOBILE. Social Media Icons and BOTTOM NAV BAR Container for MOBILE. *****ATTENTOIN: THIS IS HIDDEN IN DESKTOP (BLOCK #6)  ====================-->
               <table class="bottom-nav-table-mobile table-container box-shadow" style="display: none; padding: 10px 0px 20px 0px; border-bottom: 1px solid #817B73; font-family: Helvetica;" align="center" cellpadding="3" cellspacing="15" width="600" height="100">
-                <tr style="font-size: 10px;">
+                <tr>
                   <!-- CELLS FOR MOBILE NAV BAR -->
                   <td class="bot-nav-cell" width="600">
                     <li style="list-style: none; border-right: 1px solid #817B73; padding-right: 10px;"><a style="text-decoration: none; color: #817B73;" href="https://support.uncommongoods.com/hc/en-us/articles/225245967-Contact-us-">contact us</a></li>
@@ -412,15 +432,16 @@
                     <li style="list-style: none; padding-right: 5px; padding-left: 10px;"><a style="text-decoration: none; color: #817B73;" href="http://blog.uncommongoods.com/">blog</a></li>
                   </td>
                   <td class="bot-nav-cell" style="padding-top: 10px;" width="600">
-                    <a style="text-decoration: none; padding: 0px 5px 0px 0px" id="icon-link" href="https://www.facebook.com/uncommongoods/"><img class="responsive-image-icons" src="http://i66.tinypic.com/2rwwyuo.png" alt=""></a>
+                    <a style="text-decoration: none; padding: 0px 5px 0px 0px" href="https://www.facebook.com/uncommongoods/"><img class="responsive-image-icons" src="http://i66.tinypic.com/2rwwyuo.png" alt=""></a>
                     <a href="https://twitter.com/UncommonGoods?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="responsive-image-icons" src="http://i65.tinypic.com/1zey4nl.png" alt=""></a>
                     <a style="text-decoration: none;" id="icon-link" href="https://www.pinterest.com/uncommongoods/"><img class="responsive-image-icons" src="http://i66.tinypic.com/2n87pxz.png" alt=""></a>
                     <a style="text-decoration: none;" id="icon-link" href="https://www.instagram.com/uncommongoods/"><img class="responsive-image-icons" src="http://i67.tinypic.com/2m4ykbq.png" alt=""></a>
                   </td>
                 </tr>
               </table>
+              <br class="block-breaks" style="display: none;">
                 <!-- FOOTER TABLE CONTAINING COPYRIGHT INFO, ADDRESS, EMAIL ETC... (BLOCK #7) -->
-                <table class="footer-info-table table-container box-shadow" style="font-family: Helvetica; font-size: 12px; padding: 20px 0px 40px 20px;" align="center" cellspacing="0" width="600">
+                <table class="footer-info-table table-container box-shadow" style="font-family: Helvetica; font-size: 18px; padding: 20px 0px 40px 20px;" align="center" cellspacing="0" width="600">
                   <tr>
                     <td>
                       <p>Adjust your email subscriptions, frequency, and settings:</p>
